@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: rlespinasse/drawio-export-action@v2
         with:
           format: svg
@@ -22,5 +23,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Actions] Draw SVG file"
-          ref: ${{ github.head_ref }}
       
