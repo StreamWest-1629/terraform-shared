@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Burnett01/actions-drawio@1.2
+      - uses: rlespinasse/drawio-export-action@v2
         with:
-          src: docs/architecture.drawio
-          dest: docs/architecture.svg
+          format: svg
+          path: docs/architecture
+          output: docs/architecture
+          transparent: false          
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Actions] Draw SVG file"
