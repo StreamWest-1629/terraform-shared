@@ -26,9 +26,14 @@ services:
       - ..:/workspace:cached
       - ~/.git-credentials:/root/.git-credentials:ro
       - ~/.aws:/root/.aws:ro
-
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
       # - /var/run/docker.sock:/var/run/docker.sock 
+
+    environment:
+      AWS_PROFILE: ${AWS_PROFILE}
+      S3_BUCKETNAME: streamwest1629-shared
+      PROJECT_NAME: shared
+      AWS_REGION: ap-northeast-1
 
     # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
     # cap_add:
@@ -38,4 +43,3 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
- 
