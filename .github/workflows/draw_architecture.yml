@@ -4,6 +4,9 @@ on:
     branches:
       - main
       - stg
+    path:
+      - "./docs/architecture.drawio"
+      - ".github/workflows/draw_architecture.yml"
 
 jobs:
   draw:
@@ -18,9 +21,10 @@ jobs:
         with:
           format: svg
           path: ./docs/architecture.drawio
-          output: ./docs
+          output: ./
           transparent: false  
-          action-mode: all    
+          action-mode: all
+      
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Draw Infrastructure's Architecture
