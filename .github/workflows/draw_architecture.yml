@@ -7,7 +7,6 @@ on:
 
 jobs:
   draw:
-    contents: write
     name: Draw Infrastructure's Architecture to SVG
     runs-on: ubuntu-latest
     steps:
