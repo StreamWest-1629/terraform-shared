@@ -1,8 +1,9 @@
 name: Draw Infrastructure's Architecture to SVG
-on: push
-  branches:
-    - main
-    - stg
+on: 
+  push:
+    branches:
+      - main
+      - stg
 
 jobs:
   draw:
