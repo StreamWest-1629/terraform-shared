@@ -14,3 +14,28 @@ module "vpc_1" {
     ProjectName = var.PROJECT_NAME
   }
 }
+
+output "vpc_1_vpcid" {
+  value     = module.vpc_1.vpcid
+  sensitive = true
+}
+
+output "vpc_1_public_1_subnetid" {
+  value     = module.vpc_1.public_subnet_id[0]
+  sensitive = true
+}
+
+output "vpc_1_public_2_subnetid" {
+  value     = module.vpc_1.public_subnet_id[1]
+  sensitive = true
+}
+
+output "vpc_1_private_1_subnetid" {
+  value     = module.vpc_1.private_subnet_id[0]
+  sensitive = true
+}
+
+output "vpc_1_private_2_subnetid" {
+  value     = module.vpc_1.private_subnet_id[1]
+  sensitive = true
+}
