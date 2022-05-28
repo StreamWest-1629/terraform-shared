@@ -17,7 +17,6 @@ jobs:
       - uses: rlespinasse/drawio-export-action@v2
         with:
           format: svg
-          path: docs/architecture.drawio
           output: docs
           transparent: false          
       - uses: stefanzweifel/git-auto-commit-action@v4
