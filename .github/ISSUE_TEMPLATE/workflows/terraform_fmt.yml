@@ -1,6 +1,6 @@
 name: Terraform fmt
 on: 
-  - push
+  push:
 
 jobs:
   terraform_fmt:
