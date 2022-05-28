@@ -18,7 +18,7 @@ jobs:
         with:
           format: svg
           path: docs/architecture.drawio
-          output: docs/architecture.svg
+          output: docs
           transparent: false          
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
