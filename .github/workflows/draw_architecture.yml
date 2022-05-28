@@ -19,7 +19,8 @@ jobs:
           format: svg
           path: docs/architecture.drawio
           output: docs
-          transparent: false          
+          transparent: false  
+          action-mode: recent        
       - name: 
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
