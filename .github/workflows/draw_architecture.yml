@@ -11,7 +11,7 @@ jobs:
     name: Draw Infrastructure's Architecture to SVG
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - uses: Burnett01/actions-drawio@1.2
         with:
           src: docs/architecture.drawio
