@@ -4,18 +4,29 @@ on:
     branches:
       - main
       - stg
+    path:
+      - "./docs/architecture.drawio"
+      - ".github/workflows/draw_architecture.yml"
 
 jobs:
   draw:
     name: Draw Infrastructure's Architecture to SVG
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: Burnett01/actions-drawio@1.2
+      - uses: actions/checkout@v2
         with:
-          src: docs/architecture.drawio
-          dest: docs/architecture.svg
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: rlespinasse/drawio-export-action@v2
+        with:
+          format: svg
+          path: ./docs/architecture.drawio
+          output: ./
+          transparent: false  
+          action-mode: all
+      - name: Rename file
+        run: mv ./docs/architecture-Page-1.svg ./docs/architecture.svg
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[Actions] Draw SVG file"
-      
+          commit_message: Draw Infrastructure's Architecture
+        
