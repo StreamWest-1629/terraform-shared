@@ -20,7 +20,7 @@ jobs:
           path: docs/architecture.drawio
           output: docs
           transparent: false  
-          action-mode: recent        
+          action-mode: all    
       - name: 
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
