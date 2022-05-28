@@ -17,22 +17,11 @@ jobs:
       - uses: rlespinasse/drawio-export-action@v2
         with:
           format: svg
-          path: docs/architecture.drawio
-          output: docs
+          path: ./docs/architecture.drawio
+          output: ./docs
           transparent: false  
           action-mode: all    
-      - name: 
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          if (git diff --shortstat | grep '[0-9]'); then \
-            git add .; \
-            git commit -m "GitHub Actions から差分を Push"; \
-            git push origin HEAD:${GITHUB_REF}; \
-          else \
-            echo "No changes..."; \
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Draw Infrastructure's Architecture
         
-      
