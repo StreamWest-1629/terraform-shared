@@ -1,7 +1,7 @@
 # Terraform Shared Resources
 
 ## Architecture Graph
-[![](./docs/architecture.svg)](./docs/architecture.svg)
+[![](./docs/architecture.jpg)](./docs/architecture.jpg)
 
 面倒だと思うその前にtemplateを作りました．
 
