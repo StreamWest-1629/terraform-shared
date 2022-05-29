@@ -31,6 +31,7 @@ output "host_primary_zoneid" {
 
 output "host_primary_certarn" {
   value = aws_acm_certificate.primary.arn
+  sensitive = true
 }
 
 resource "aws_route53_record" "cert" {

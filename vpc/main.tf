@@ -39,6 +39,14 @@ output "vpcid" {
   value = aws_vpc.vpc.id
 }
 
+output "default_security_group_id" {
+  value = aws_vpc.vpc.default_security_group_id
+}
+
+output "main_acl_id" {
+  value = aws_vpc.vpc.default_network_acl_id
+}
+
 output "public_subnet_id" {
   value = aws_subnet.public.*.id
 }
