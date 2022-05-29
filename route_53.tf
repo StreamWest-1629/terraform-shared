@@ -30,7 +30,7 @@ output "host_primary_zoneid" {
 }
 
 output "host_primary_certarn" {
-  value = aws_acm_certificate.primary.arn
+  value     = aws_acm_certificate.primary.arn
   sensitive = true
 }
 

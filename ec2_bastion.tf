@@ -48,9 +48,9 @@ resource "aws_security_group" "bastion" {
   vpc_id = module.vpc_1.vpcid
   ingress {
     security_groups = [aws_security_group.main_alb.id]
-    protocol    = "tcp"
-    from_port   = 3443
-    to_port     = 3443
+    protocol        = "tcp"
+    from_port       = 3443
+    to_port         = 3443
   }
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
