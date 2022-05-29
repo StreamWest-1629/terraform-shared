@@ -10,6 +10,10 @@ module "vpc_1" {
     "10.0.16.0/20",
     "10.0.144.0/20"
   ]
+  az_names = [
+    "ap-northeast-1a",
+    "ap-northeast-1c"
+  ]
   tags = {
     ProjectName = var.PROJECT_NAME
   }
