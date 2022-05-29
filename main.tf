@@ -6,6 +6,11 @@ terraform {
   backend "s3" {
     key = "terraform.tfstate"
   }
+  required_providers {
+    local = {
+      source = "hashicorp/local"
+    }
+  }
 }
 
 provider "aws" {
