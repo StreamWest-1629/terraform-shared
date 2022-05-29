@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: rlespinasse/drawio-export-action@v2
         with:
-          format: svg
+          format: jpg
           path: ./docs/architecture.drawio
           output: ./
           transparent: false  
