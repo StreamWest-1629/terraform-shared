@@ -25,7 +25,7 @@ jobs:
           transparent: false  
           action-mode: all
       - name: Rename file
-        run: mv ./docs/architecture-Page-1.svg ./docs/architecture.svg
+        run: mv ./docs/architecture-Page-1.jpg ./docs/architecture.jpg
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Draw Infrastructure's Architecture
